@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Open+Sans:wght@300;400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;    
+    background-color: #12486B;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Fredoka', sans-serif;
+    color: white;
+    font-size: 48px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 24px;
+}
+
+.tarjetas, .tarjetas-ataques {
+    display: flex; /* grid */
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 24px;
+    row-gap: 24px;
+    margin: 16px;
+}
+
+.tarjeta-de-mokepon {
+    width: 180px;
+    height: 120px;
+    background: #F5FCCD;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #12486B;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;    
+    cursor: pointer;
+    transition: background-color 0.1s; 
+}
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+}
+
+
+input:checked + label {
+    background-color: #F4F27E;
+} 
+
+#boton-mascota{
+    width: 180px;
+    height: 40px;
+    border-radius: 16px;
+    background: transparent;
+    border: 2px solid;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-top: 32px;
+    cursor: pointer;
+    transition: background-color 0.1s; 
+}
+
+input {
+    display: none;
+    margin: 16px;
+    border: 1px;
+} 
+
+#seleccionar-ataque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: #F5FCCD;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border-color: transparent;
+    width: 80px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px; 
+    color: #12486B;
+    cursor: pointer;
+}
+
+#mensajes {
+    width: 392px;
+    background: #78D6C6;
+    padding: 8px;
+    margin-top: 16px;
+    border-radius: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: none;
+    color: #12486B;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px;
+} 
+
+.ataques {
+    display: grid;
+    grid-template-columns: 188px 188px;
+    gap: 24px;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #419197;
+    font-size: 14px; 
+    color: white;
+    padding: 8px;
+    margin-top: 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button {
+    width: 60px;
+    height: 40px;
+    border-radius: 16px;
+    background: transparent;
+    border: 2px solid;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s; 
+}
+
+@media(max-width:560px){
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:360px){
+    .ataques {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:300px){
+    #ver-mapa div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
